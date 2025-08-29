@@ -1,20 +1,22 @@
-**GadgetGlance**
+##**GadgetGlance**
 
 GadgetGlance is a simple and stylish website that showcases modern gadgets like smartphones, laptops, and cameras.
 The project is built using HTML and CSS with a focus on clean design and easy navigation.
 
-**✨ Features**
+##**✨ Features**
 
-Responsive and modern layout.
+► Responsive and modern layout.
 
-Gadget showcase sections (Smartphone, Laptop, Camera).
+► Gadget showcase sections (Smartphone, Laptop, Camera).
 
-Simple navigation (Home, About, Contact).
+► Simple navigation (Home, About, Contact).
 
-Lightweight and easy to run.
+► Lightweight and easy to run.
 
-**📂 Project Structure**
+##**📂 Project Structure**
+
 GadgetGlance/
+
 │── index.html        # Main home page
 
 │── gadget.html       # Gadget showcase page
@@ -30,15 +32,15 @@ GadgetGlance/
 └── README.md         # Documentation
 
 
-**🚀 How to Run**
+##**🚀 How to Run**
 
-Clone the repository:
+► Clone the repository:
 
-git clone https://github.com/Harman1408/Gadget_glance.git
+► git clone https://github.com/Harman1408/Gadget_glance.git
 
-Open the project folder.
+► Open the project folder.
 
-Run gadget.html in your browser.
+► Run gadget.html in your browser.
 
-Use Live Server in VS Code for the best experience.
+► Use Live Server in VS Code for the best experience.
 
