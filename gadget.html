@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GadgetGlance - Showcase Your Gadgets</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* NavBar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .nav-title:hover {
+    color: #d7d7d7;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 5px rgba(0, 119, 204, 0.2);
+  }
+
+    .nav-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      color: #ffcc00;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+    }
+
+    .header, .about-section, .contact-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1, .about-section h2, .contact-section h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .header p, .about-section p, .contact-section p {
+      font-size: 20px;
+      color: #ddd;
+    }
+
+    /* Gadget Grid */
+    .gadget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gadget-box {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .gadget-box:hover {
+      transform: scale(1.05);
+    }
+
+    .gadget-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .gadget-info {
+      padding: 15px;
+    }
+
+    .gadget-info h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .gadget-info p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* Button */
+    .view-more-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      background-color: #ffcc00;
+      color: #000;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .view-more-btn:hover {
+      background-color: #ffaa00;
+    }
+    .header h1:hover {
+    color: #cbcccc;
+    transform: scale(1.05);
+  }
+
+  .header p:hover {
+    color: #e8dfdf;
+    font-style: italic;
+  }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      margin-top: 40px;
+    }
+    /* Media Queries */
+@media (max-width: 1024px) {
+  .header h1, .about-section h2, .contact-section h2 {
+    font-size: 36px;
+  }
+
+  .header p, .about-section p, .contact-section p {
+    font-size: 18px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header h1, .about-section h2, .contact-section h2 {
+    font-size: 30px;
+  }
+
+  .header p, .about-section p, .contact-section p {
+    font-size: 16px;
+  }
+
+  .gadget-info h3 {
+    font-size: 20px;
+  }
+
+  .gadget-info p {
+    font-size: 14px;
+  }
+
+  .view-more-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .header h1, .about-section h2, .contact-section h2 {
+    font-size: 24px;
+  }
+
+  .nav-title {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links a {
+    margin: 5px 0;
+  }
+
+  .gadget-img {
+    height: 150px;
+  }
+
+  .view-more-btn {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="nav-title">GadgetGlance</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <div class="container" id="home">
+    <div class="header">
+      <h1><b>Welcome to GadgetGlance</b></h1>
+      <p>Explore the world of smart and stylish gadgets</p>
+    </div>
+
+    <!-- Gadget Display -->
+    <div class="gadget-grid" id="gadget-grid">
+      <div class="gadget-box">
+        <img src="iphone.webp" class="gadget-img" alt="Smartphone" />
+        <div class="gadget-info">
+          <h3>Smartphone</h3>
+          <p>Top-tier mobile device with excellent performance and camera.</p>
+        </div>
+      </div>
+
+      <div class="gadget-box">
+        <img src="laptop.jpg" class="gadget-img" alt="Laptop" />
+        <div class="gadget-info">
+          <h3>Laptop</h3>
+          <p>High-speed laptop ideal for gaming and productivity.</p>
+        </div>
+      </div>
+
+      <div class="gadget-box">
+        <img src="dslr.jpeg" class="gadget-img" alt="Camera" />
+        <div class="gadget-info">
+          <h3>Camera</h3>
+          <p>Professional DSLR for stunning photography and videography.</p>
+        </div>
+      </div>
+
+      <!-- Hidden gadgets -->
+      <div class="gadget-box" style="display: none;">
+        <img src="smartwatch.png" class="gadget-img" alt="Smartwatch" />
+        <div class="gadget-info">
+          <h3>Smartwatch</h3>
+          <p>Track fitness, receive alerts, and look stylish on the go.</p>
+        </div>
+      </div>
+
+      <div class="gadget-box" style="display: none;">
+        <img src="headphones.webp" class="gadget-img" alt="Headphones" />
+        <div class="gadget-info">
+          <h3>Headphones</h3>
+          <p>Noise-cancelling headphones with immersive audio experience.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="view-more-btn" id="view-more-btn">View More Gadgets</button>
+  </div>
+
+  <!-- About Section -->
+  <div class="container" id="about">
+    <div class="about-section">
+      <h2>About GadgetGlance</h2>
+      <p>
+        GadgetGlance is your go-to destination for discovering the coolest and most cutting-edge gadgets in the tech world.
+        From smartphones to wearables, we bring you a curated collection of devices to explore.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="container" id="contact">
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Email: contact@gadgetglance.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 123 Tech Street, Silicon City, India</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 GadgetGlance. All rights reserved.
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("view-more-btn").addEventListener("click", function () {
+      const hiddenGadgets = document.querySelectorAll('.gadget-box[style*="display: none"]');
+      hiddenGadgets.forEach(item => item.style.display = "block");
+      this.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
