@@ -1,9 +1,9 @@
-**GadgetGlance**
+**GadgetGlance**:
 
 GadgetGlance is a simple and stylish website that showcases modern gadgets like smartphones, laptops, and cameras.
 The project is built using HTML and CSS with a focus on clean design and easy navigation.
 
-**✨ Features**
+**✨ Features**:
 
 ► Responsive and modern layout.
 
@@ -13,7 +13,7 @@ The project is built using HTML and CSS with a focus on clean design and easy na
 
 ► Lightweight and easy to run.
 
-**📂 Project Structure**
+**📂 Project Structure**:
 
 GadgetGlance/
 
@@ -32,7 +32,7 @@ GadgetGlance/
 └── README.md         # Documentation
 
 
-**🚀 How to Run**
+**🚀 How to Run**:
 
 ► Clone the repository:
 
